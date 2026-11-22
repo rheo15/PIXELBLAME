@@ -1,0 +1,7 @@
+{
+  "name": "@pixelblame/server",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "dependencies": { "@pixelblame/core": "*", "express": "^4.21.0" }
+}

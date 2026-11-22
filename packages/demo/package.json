@@ -1,0 +1,9 @@
+{
+  "name": "@pixelblame/demo",
+  "version": "0.1.0",
+  "type": "module",
+  "dependencies": {
+    "@pixelblame/core": "*",
+    "sharp": "^0.33.5"
+  }
+}

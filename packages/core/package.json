@@ -1,0 +1,24 @@
+{
+  "name": "@pixelblame/core",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "pixelblame": "dist/cli.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "sharp": "^0.33.5"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./dist/cli.js": {
+      "types": "./dist/cli.d.ts",
+      "default": "./dist/cli.js"
+    }
+  }
+}

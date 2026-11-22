@@ -1,0 +1,28 @@
+{
+  "name": "pixelblame",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Image Blame and Drift Map for vision-language model apps",
+  "license": "MIT",
+  "type": "module",
+  "workspaces": ["packages/core", "packages/server", "packages/demo"],
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "tsc -b packages/core packages/server packages/demo",
+    "test": "vitest run",
+    "dev": "npm run build && node packages/server/dist/index.js",
+    "pixelblame": "node packages/core/dist/cli.js",
+    "demo": "npm run build && node packages/demo/dist/record.js",
+    "demo:drift": "npm run build && node packages/demo/dist/drift.js",
+    "demo:near": "npm run build && node packages/demo/dist/near.js",
+    "demo:blame": "npm run build && node packages/demo/dist/blame.js",
+    "demo:all": "npm run build && node packages/demo/dist/record.js && node packages/demo/dist/drift.js && node packages/demo/dist/near.js && node packages/demo/dist/blame.js"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}
